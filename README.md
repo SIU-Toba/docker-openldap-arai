@@ -1,7 +1,8 @@
 # docker-openldap-arai
 Docker OpenLDAP estructurado para SIU-Araí
 
-Contenedor Docker para instalar un entorno de desarrollo para SIU-Araí con OpenLDAPToba, incluyendo las clases de federación: EduOrg y EduPerson.
+Contenedor Docker para instalar un entorno de desarrollo para SIU-Araí con OpenLDAP, incluyendo las clases de federación: EduOrg y EduPerson.
+
 Requerimientos
 
     Se debe tener instalado Docker
