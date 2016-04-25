@@ -1,0 +1,13 @@
+# Entry Usuarios: ou=usuarios,dc=arai,dc=siu
+dn: ou=usuarios,dc=arai,dc=siu
+changetype: add
+objectclass: top
+objectclass: organizationalUnit
+ou: usuarios
+
+# Entry Usuarios Cuentas: ou=usuariosCuentas,dc=arai,dc=siu
+dn: ou=usuariosCuentas,dc=arai,dc=siu
+changetype: add
+objectclass: top
+objectclass: organizationalUnit
+ou: usuariosCuentas
