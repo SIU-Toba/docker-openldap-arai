@@ -1,5 +1,5 @@
-NAME = siutoba/docker-openldap-arai
-VERSION = 1.0.0
+﻿NAME = siutoba/docker-openldap-arai
+VERSION = 1.1.0
 
 .PHONY: all build build-nocache
 
