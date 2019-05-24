@@ -10,7 +10,7 @@ attributetype ( 2.25.23498964053317889486365664544994739483.105 NAME 'passwordRe
 
 attributetype ( 2.25.23498964053317889486365664544994739483.106 NAME 'atributos' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
 
-attributetype ( 2.25.23498964053317889486365664544994739483.107 NAME 'cuentas' DESC 'Cuentas del usuario Arai' EQUALITY distinguishedNameMatch SYNTAX '1.3.6.1.4.1.1466.115.121.1.12' )
+attributetype ( 2.25.23498964053317889486365664544994739483.107 NAME 'cuentas' DESC 'Cuentas del usuario Arai' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
 
 objectclass ( 2.25.23498964053317889486365664544994739483.100 NAME 'inetOrgPersonArai' SUP Top AUXILIARY MUST ( uid $ bloqueado ) MAY ( idPersona $ intentosFallidos $ passwordRecoveryExpiracion $ passwordRecoveryToken $ uniqueIdentifier $ atributos $ cuentas ) )
 
