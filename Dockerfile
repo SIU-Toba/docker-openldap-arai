@@ -1,5 +1,6 @@
 FROM osixia/openldap:latest
-MAINTAINER Federico Bohn <fbohn@siu.edu.ar>
+MAINTAINER Andres Blanco <ablanco@siu.edu.ar>
+MAINTAINER Sergio Fabián Vier <svier@siu.edu.ar>
 
 ADD bootstrap /container/service/slapd/assets/config/bootstrap
 ADD certs /container/service/slapd/assets/certs

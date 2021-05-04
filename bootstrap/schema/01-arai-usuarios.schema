@@ -1,0 +1,41 @@
+attributetype ( 2.25.23498964053317889486365664544994739483.101 NAME 'idPersona' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.102 NAME 'bloqueado' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.106 NAME 'atributos' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.107 NAME 'cuentas' DESC 'Cuentas del usuario Arai' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.108 NAME 'login' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.109 NAME 'loginMethod' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.110 NAME 'mailPassRecovery' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.111 NAME 'mailVerified' EQUALITY booleanMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.112 NAME 'mailPassRecoveryVerified' EQUALITY booleanMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.113 NAME 'mobileVerified' EQUALITY booleanMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.114 NAME 'gender' DESC 'Genero del usuario' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.115 NAME 'birthDate' DESC 'Fecha de nacimiento del usuario' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.116 NAME 'zoneInfo' DESC 'Zona horaria del usuario' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.117 NAME 'requiereSecondFactor' EQUALITY booleanMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+
+objectclass ( 2.25.23498964053317889486365664544994739483.100 NAME 'inetOrgPersonArai' SUP Top AUXILIARY MUST ( uid $ bloqueado ) MAY ( login $ loginMethod $ idPersona $ mailPassRecovery $ mailVerified $ mailPassRecoveryVerified $ mobileVerified $ requiereSecondFactor $ uniqueIdentifier $ atributos $ cuentas $ gender $ birthDate $ zoneInfo ) )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.2011 NAME 'aid' DESC 'Account identifier' EQUALITY 	caseIgnoreMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.202 NAME 'cuenta'  DESC 'Ej. "jperez", es el ID con el que se conoce el usuario en la aplicacion' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.203 NAME 'appUniqueId' DESC 'siu-guarani_1.siu-guarani' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.204 NAME 'appUnlink' DESC 'SIU-Guarani' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+attributetype ( 2.25.23498964053317889486365664544994739483.205 NAME 'defecto' DESC 'campo para determinar la cuenta por defecto para una determinada aplicacion' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+objectclass ( 2.25.23498964053317889486365664544994739483.200 NAME 'accountArai' SUP Top AUXILIARY MUST ( aid $ cuenta $ defecto ) MAY ( appUniqueId $ appUnlink $ requiereSecondFactor ) )
