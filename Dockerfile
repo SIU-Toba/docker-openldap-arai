@@ -40,7 +40,9 @@ WORKDIR /openldap
 # FINAL Stage
 ########################
 FROM osixia/openldap:${OSIXIA_VER}
-MAINTAINER Sergio Fabián Vier <svier@siu.edu.ar>
+
+LABEL org.opencontainers.image.authors="svier@siu.edu.ar"
+LABEL org.opencontainers.image.authors="rdalinger@siu.edu.ar"
 
 ## Copia modulo bcrypt
 COPY --from=builder /libtocopy /usr/lib/ldap/
