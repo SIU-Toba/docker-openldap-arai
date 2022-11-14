@@ -41,8 +41,7 @@ WORKDIR /openldap
 ########################
 FROM osixia/openldap:${OSIXIA_VER}
 
-LABEL org.opencontainers.image.authors="svier@siu.edu.ar"
-LABEL org.opencontainers.image.authors="rdalinger@siu.edu.ar"
+LABEL org.opencontainers.image.authors="arai@siu.edu.ar"
 
 ## Copia modulo bcrypt
 COPY --from=builder /libtocopy /usr/lib/ldap/
